@@ -53,51 +53,51 @@ Sub Object 1: Steering Wheel
     Name 4 things you'll find on the:    Steering Wheel
         1) paddle shifters
         2) 'cruise control' controls
-        3) 
-        4) 
+        3) telephone button
+        4) horn 
     Name 2 things you can do with the:   Steering Wheel
         1) adjust cruise control settings.
-        2)
+        2) call someone.
         
 Sub Object 2: Instrument Cluster
     Name 4 things you'll find on the:   Instrument Cluster
-        1)
-        2)
-        3)
-        4)
+        1)speedmeter
+        2)tachometer
+        3)airbag
+        4)air conditioner
     Name 3 things you can do with the:   Instrument Cluster
-        1)
-        2)
-        3)
+        1)display current speed
+        2)displays the current engine speed
+        3)cushioning in the event of a collision
     
 Sub Object 3: Environment Controls
     Name 3 things you'll find on the:    Environment Controls
-        1)
-        2)
-        3)
+        1)air conditioner switch
+        2)temperature control dial
+        3)mode change switch
     Name 3 things you can do with the:   Environment Controls
-        1)
-        2)
-        3)
+        1)turn on air conditioning
+        2)regulate temperature
+        3)switching the air conditioner outlet
 
 Sub Object 4: Infotainment System
     Name 3 things you'll find on the:    Infotainment System
-        1)
-        2)
-        3)
+        1)map
+        2)audio system
+        3)radio
     Name 3 things you can do with the:   Infotainment System
-        1)
-        2)
-        3)
+        1)display the current location
+        2)play music
+        3)play radio
 
 Sub Object 5: Seat 
     Name 3 things you'll find on the:    Seat
-        1)
-        2)
-        3)
+        1)lever
+        2)heater
+        3)seat belt
     Name 2 things you can do with the:   Seat
-        1)
-        2)
+        1)put one's seat back
+        2)warm a seat
 */
 
 /*
@@ -155,59 +155,59 @@ Part 1b Assignment: 1 Step
 */
 
 /*
-Thing 1)
+Thing 1)Cook Dinner
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)number of seasonings
+    2)cost of necessary foodstuffs
+    3)number of gas bills required
+    4)time it takes
+    5)number of dishes
 3 things it can do:
-    1)
-    2)
-    3)
+    1)seasoning for food
+    2)select foodstuffs
+    3)heat several pans at the same time
  */
 
 /*
-Thing 2)
+Thing 2) Live Performance
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)fees for performers
+    2)days of practice
+    3)facility rental fees
+    4)number of songs
+    5)number of performers
 3 things it can do:
-    1)
-    2)
-    3)
+    1)bring the money 
+    2)do performance practice
+    3)reserve a facility
  */
 
 /*
-Thing 3)
+Thing 3)Open a business
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)business funds
+    2)store area
+    3)number of employees
+    4)number of computers
+    5)number of business cards
 3 things it can do:
-    1)
-    2)
-    3)
+    1)produce products
+    2)pay rent
+    3)hire an employee
  */
 
 /*
-Thing 4)
+Thing 4)take a picture
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)f-value
+    2)number of pixels
+    3)iso sensitivity
+    4)shutter speed
+    5)zoom magnification
 3 things it can do:
-    1)
-    2)
-    3)
+    1)capture the light
+    2)resolve image
+    3)brighten the image
  */
 
  /*
@@ -280,17 +280,17 @@ Define an object that is made of 5 sub-objects.
 */
 
 /*
-Thing 10)
+Thing 10)Car 
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)wheel (diameter)(float)
+    2)engine (horsepower)(int)
+    3)transmission (number of gears)(int)
+    4)body (vehicle weight)(float)
+    5)gasoline (type)(std::string)
 3 things it can do:
-    1)
-    2)
-    3)
+    1)putting people 
+    2)turn the car around
+    3)change the speed
  */
 
 /*
@@ -385,73 +385,73 @@ Step 3 is written below UDTs 5 - 9
 */
 
 /*
-Thing 5)
+Thing 5)Wheel
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)diameter (float)
+    2)umber of bolt holes (int)
+    3)rim width (float)
+    4)flange shape (char)
+    5)pitch circle diameter (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1)support the body
+    2)transmits engine power to tires and road surface
+    3)allows brake heat to escape
  */
 
 /*
-Thing 6)
+Thing 6)Engine
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)nunber of cylinder (int)
+    2)horsepower (ps) (int)
+    3)engine displacement (cc)　(int)
+    4)maximum torque (Nm) (int)
+    5)turbo (bool)
 3 things it can do:
-    1)
-    2)
-    3)
+    1)generate motive power
+    2)generate heat
+    3)pushing the piston down
  */
 
 /*
-Thing 7)
+Thing 7)Transmission
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)AT (bool)
+    2)number of gears(int)
+    3)driven type (std::string)
+    4)number of clutch plates (int)
+    5)frequency of maintenance (days) (int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1)create driving force
+    2)increase acceleration
+    3)increase fuel efficiency
  */
 
 /*
-Thing 8)
+Thing 8)Body 
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)type of body shape (std::string)
+    2)over-all length (m) (float)
+    3)over-all height (m) (float)
+    4)capacity (int)
+    5)weight (kg) (float)
 3 things it can do:
-    1)
-    2)
-    3)
+    1)carry luggage
+    2)covering the engine
+    3)protects people from impact
  */
 
 /*
-Thing 9)
+Thing 9)Gasoline
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1)type (std::string)
+    2)fuel consumption
+    3)capacity (liter)　(float)
+    4)boiling point (degree) (int)
+    5)price per liter (yen)(int)
 3 things it can do:
-    1)
-    2)
-    3)
+    1)fruel your car
+    2)inhale into the cylinder
+    3)burn
  */
 
 /*
@@ -470,12 +470,147 @@ MOVE THEM BELOW this block comment and put them in numerical order
 
 After you have MOVED your 10 UDTs, send me a DM with your pull request link.
 I will review the pseudo-code that you have written.
+/*
+Thing 1)Cook Dinner
+5 properties:
+    1)number of seasonings
+    2)cost of necessary foodstuffs
+    3)number of gas bills required
+    4)time it takes
+    5)number of dishes
+3 things it can do:
+    1)seasoning for food
+    2)select foodstuffs
+    3)heat several pans at the same time
 */
 
+/*
+Thing 2) Live Performance
+5 properties:
+    1)fees for performers
+    2)days of practice
+    3)facility rental fees
+    4)number of songs
+    5)number of performers
+3 things it can do:
+    1)bring the money 
+    2)do performance practice
+    3)reserve a facility
+ */
 
+/*
+Thing 3)Open a Business
+5 properties:
+    1)business funds
+    2)store area
+    3)number of employees
+    4)number of computers
+    5)number of business cards
+3 things it can do:
+    1)produce products
+    2)pay rent
+    3)hire an employee
+ */
+
+/*
+Thing 4)Take a Picture
+5 properties:
+    1)f-value
+    2)number of pixels
+    3)iso sensitivity
+    4)shutter speed
+    5)zoom magnification
+3 things it can do:
+    1)capture the light
+    2)resolve image
+    3)brighten the image
+ */
 
 
 /*
+Thing 10)Car 
+5 properties:
+    1)wheel (diameter)(float)
+    2)engine (horsepower)(int)
+    3)transmission (number of gears)(int)
+    4)body (vehicle weight)(float)
+    5)gasoline (type)(std::string)
+3 things it can do:
+    1)putting people 
+    2)turn the car around
+    3)change the speed
+ */
+
+    
+/*
+Thing 5)Wheel
+5 properties:
+    1)diameter (float)
+    2)umber of bolt holes (int)
+    3)rim width (float)
+    4)flange shape (char)
+    5)pitch circle diameter (float)
+3 things it can do:
+    1)support the body
+    2)transmits engine power to tires and road surface
+    3)allows brake heat to escape
+*/
+
+/*
+Thing 6)Engine
+5 properties:
+    1)nunber of cylinder (int)
+    2)horsepower (ps) (int)
+    3)engine displacement (cc)　(int)
+    4)maximum torque (Nm) (int)
+    5)turbo (bool)
+3 things it can do:
+    1)generate motive power
+    2)generate heat
+    3)pushing the piston down
+ */
+
+/*
+Thing 7)Transmission
+5 properties:
+    1)AT (bool)
+    2)number of gears(int)
+    3)driven type (std::string)
+    4)number of clutch plates (int)
+    5)frequency of maintenance (days) (int)
+3 things it can do:
+    1)create driving force
+    2)increase acceleration
+    3)increase fuel efficiency
+ */
+
+/*
+Thing 8)Body 
+5 properties:
+    1)type of body shape (std::string)
+    2)over-all length (m) (float)
+    3)over-all height (m) (float)
+    4)capacity (int)
+    5)weight (kg) (float)
+3 things it can do:
+    1)carry luggage
+    2)covering the engine
+    3)protects people from impact
+ */
+
+/*
+Thing 9)Gasoline
+5 properties:
+    1)type (std::string)
+    2)fuel consumption
+    3)capacity (liter)　(float)
+    4)boiling point (degree) (int)
+    5)price per liter (yen)(int)
+3 things it can do:
+    1)fruel your car
+    2)inhale into the cylinder
+    3)burn
+ /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
  Commit your changes by clicking on the Source Control panel on the left, entering a message, and click [Commit and push].
