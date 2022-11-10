@@ -470,7 +470,10 @@ MOVE THEM BELOW this block comment and put them in numerical order
 
 After you have MOVED your 10 UDTs, send me a DM with your pull request link.
 I will review the pseudo-code that you have written.
+*/
+
 /*
+
 Thing 1)Cook Dinner
 5 properties:
     1)number of seasonings
@@ -610,7 +613,9 @@ Thing 9)Gasoline
     1)fruel your car
     2)inhale into the cylinder
     3)burn
- /*
+ */
+
+/*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
  Commit your changes by clicking on the Source Control panel on the left, entering a message, and click [Commit and push].
