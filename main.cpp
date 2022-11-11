@@ -154,61 +154,7 @@ Part 1b Assignment: 1 Step
         'int float double bool char std::string'.
 */
 
-/*
-Thing 1)Cook Dinner
-5 properties:
-    1)number of seasonings
-    2)cost of necessary foodstuffs
-    3)number of gas bills required
-    4)time it takes
-    5)number of dishes
-3 things it can do:
-    1)seasoning for food
-    2)select foodstuffs
-    3)heat several pans at the same time
- */
 
-/*
-Thing 2) Live Performance
-5 properties:
-    1)fees for performers
-    2)days of practice
-    3)facility rental fees
-    4)number of songs
-    5)number of performers
-3 things it can do:
-    1)bring the money 
-    2)do performance practice
-    3)reserve a facility
- */
-
-/*
-Thing 3)Open a business
-5 properties:
-    1)business funds
-    2)store area
-    3)number of employees
-    4)number of computers
-    5)number of business cards
-3 things it can do:
-    1)produce products
-    2)pay rent
-    3)hire an employee
- */
-
-/*
-Thing 4)take a picture
-5 properties:
-    1)f-value
-    2)number of pixels
-    3)iso sensitivity
-    4)shutter speed
-    5)zoom magnification
-3 things it can do:
-    1)capture the light
-    2)resolve image
-    3)brighten the image
- */
 
  /*
 Part 1c - Lesson
@@ -278,20 +224,6 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 */
-
-/*
-Thing 10)Car 
-5 properties:
-    1)wheel (diameter)(float)
-    2)engine (horsepower)(int)
-    3)transmission (number of gears)(int)
-    4)body (vehicle weight)(float)
-    5)gasoline (type)(std::string)
-3 things it can do:
-    1)putting people 
-    2)turn the car around
-    3)change the speed
- */
 
 /*
 Part 1d - Lesson
@@ -385,76 +317,6 @@ Step 3 is written below UDTs 5 - 9
 */
 
 /*
-Thing 5)Wheel
-5 properties:
-    1)diameter (float)
-    2)umber of bolt holes (int)
-    3)rim width (float)
-    4)flange shape (char)
-    5)pitch circle diameter (float)
-3 things it can do:
-    1)support the body
-    2)transmits engine power to tires and road surface
-    3)allows brake heat to escape
- */
-
-/*
-Thing 6)Engine
-5 properties:
-    1)nunber of cylinder (int)
-    2)horsepower (ps) (int)
-    3)engine displacement (cc)　(int)
-    4)maximum torque (Nm) (int)
-    5)turbo (bool)
-3 things it can do:
-    1)generate motive power
-    2)generate heat
-    3)pushing the piston down
- */
-
-/*
-Thing 7)Transmission
-5 properties:
-    1)AT (bool)
-    2)number of gears(int)
-    3)driven type (std::string)
-    4)number of clutch plates (int)
-    5)frequency of maintenance (days) (int)
-3 things it can do:
-    1)create driving force
-    2)increase acceleration
-    3)increase fuel efficiency
- */
-
-/*
-Thing 8)Body 
-5 properties:
-    1)type of body shape (std::string)
-    2)over-all length (m) (float)
-    3)over-all height (m) (float)
-    4)capacity (int)
-    5)weight (kg) (float)
-3 things it can do:
-    1)carry luggage
-    2)covering the engine
-    3)protects people from impact
- */
-
-/*
-Thing 9)Gasoline
-5 properties:
-    1)type (std::string)
-    2)fuel consumption
-    3)capacity (liter)　(float)
-    4)boiling point (degree) (int)
-    5)price per liter (yen)(int)
-3 things it can do:
-    1)fruel your car
-    2)inhale into the cylinder
-    3)burn
- */
-
-/*
 ===================
 Part 1d assignment: Step 3
 ===================
@@ -473,14 +335,13 @@ I will review the pseudo-code that you have written.
 */
 
 /*
-
 Thing 1)Cook Dinner
 5 properties:
-    1)number of seasonings
-    2)cost of necessary foodstuffs
-    3)number of gas bills required
-    4)time it takes
-    5)number of dishes
+    1)number of seasonings (int)
+    2)cost of necessary foodstuffs (yen) (int)
+    3)number of gas bills required (int)
+    4)time it takes (minutes) (float)
+    5)number of dishes (int)
 3 things it can do:
     1)seasoning for food
     2)select foodstuffs
@@ -490,11 +351,11 @@ Thing 1)Cook Dinner
 /*
 Thing 2) Live Performance
 5 properties:
-    1)fees for performers
-    2)days of practice
-    3)facility rental fees
-    4)number of songs
-    5)number of performers
+    1)fees for performers (yen) (int)
+    2)days of practice (int)
+    3)facility rental fees (yen) (int)
+    4)number of songs (int)
+    5)number of performers(int)
 3 things it can do:
     1)bring the money 
     2)do performance practice
@@ -504,11 +365,11 @@ Thing 2) Live Performance
 /*
 Thing 3)Open a Business
 5 properties:
-    1)business funds
-    2)store area
-    3)number of employees
-    4)number of computers
-    5)number of business cards
+    1)business funds (yen) (int)
+    2)store area (㎡)　(float)
+    3)number of employees (int)
+    4)number of computers (int)
+    5)number of business cards (int)
 3 things it can do:
     1)produce products
     2)pay rent
@@ -518,32 +379,16 @@ Thing 3)Open a Business
 /*
 Thing 4)Take a Picture
 5 properties:
-    1)f-value
-    2)number of pixels
-    3)iso sensitivity
-    4)shutter speed
-    5)zoom magnification
+    1)f-value (float)
+    2)number of pixels (int)
+    3)iso sensitivity (int)
+    4)shutter speed (second) (float)
+    5)zoom magnification (float)
 3 things it can do:
     1)capture the light
     2)resolve image
     3)brighten the image
  */
-
-
-/*
-Thing 10)Car 
-5 properties:
-    1)wheel (diameter)(float)
-    2)engine (horsepower)(int)
-    3)transmission (number of gears)(int)
-    4)body (vehicle weight)(float)
-    5)gasoline (type)(std::string)
-3 things it can do:
-    1)putting people 
-    2)turn the car around
-    3)change the speed
- */
-
     
 /*
 Thing 5)Wheel
@@ -605,16 +450,29 @@ Thing 8)Body
 Thing 9)Gasoline
 5 properties:
     1)type (std::string)
-    2)fuel consumption
+    2)fuel consumption (km/L) (float)
     3)capacity (liter)　(float)
     4)boiling point (degree) (int)
-    5)price per liter (yen)(int)
+    5)price per liter (yen) (int)
 3 things it can do:
     1)fruel your car
     2)inhale into the cylinder
     3)burn
  */
 
+/*
+Thing 10)Car 
+5 properties:
+    1)wheel (diameter) (float)
+    2)engine (horsepower) (int)
+    3)transmission (number of gears) (int)
+    4)body (vehicle weight) (float)
+    5)gasoline (type) (std::string)
+3 things it can do:
+    1)putting people 
+    2)turn the car around
+    3)change the speed
+ */
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
