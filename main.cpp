@@ -219,9 +219,9 @@ Thing 3) storefront business
 5 properties:
     1)business funds (yen) (int)
     2)store area (㎡)　(float)
-    3)number of employees (int)
-    4)number of computers (int)
-    5)number of business cards (int)
+    3)number of items (int)
+    4)number of cash registers (int)
+    5)security equipment (bool)
 3 things it can do:
     1)produce products
     2)pay rent
@@ -231,11 +231,11 @@ Thing 3) storefront business
 /*
 Thing 4) Camera
 5 properties:
-    1)f-value (float)
-    2)number of pixels (int)
-    3)iso sensitivity (int)
-    4)shutter speed (second) (float)
-    5)zoom magnification (float)
+    1)range of f-value (float)
+    2)maximum number of pixels (int)
+    3)range of iso sensitivity (int)
+    4)range shutter speed (second) (float)
+    5)maximum zoom magnification (float)
 3 things it can do:
     1)capture the light
     2)resolve image
