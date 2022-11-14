@@ -103,7 +103,7 @@ struct CarWash //                                   1) define an empty struct fo
     //number of eco-friendly cleaning supplies      
     int numEcoFriendlyCleaningSupplies = 20;     
     //stores the amount of water used per week.     
-    float waterUsedPerWeek = 200.f;            
+    float waterUsedPerWeek = 200.0f;            
     //stores amount of profit made per week         
     float profitPerWeek = 495.95f;               
     //number of cars serviced per day               
@@ -213,7 +213,8 @@ struct Recipe
     //number of dishes (int)
     int numberOfDishes = 8;
 
-    struct RecipeWebsite {
+    struct RecipeWebsite 
+    {
         //numberOfPage (int)
         int numberOfPage = 4;
         //video time (minutes) (int)
@@ -235,7 +236,7 @@ struct Recipe
     //select foodstuffs
     void selectfoodstuffs(RecipeWebsite omelet);
     //heat several pans at the same time
-    bool heatSeveralPansAtTheSameTime(int numberOfGasBillsRequired, RecipeWebsite steak);  //returns true if it is more than 2
+    bool heatSeveralPansAtTheSameTime(int gasBills, RecipeWebsite steak); //returns true if it is more than 2
 
 };
 
@@ -255,7 +256,8 @@ Thing 2) Live Performance
     3)reserve a facility
  */
 
-struct LivePerformance{
+struct LivePerformance
+{
     //fees for performers (yen) (int)
     int feesForPerformers = 20000;
     //days of practice (int)
@@ -268,11 +270,11 @@ struct LivePerformance{
     int numberOfPerformers = 5;
     
     //bring the money 
-    int bringTheMoney(int feesForPerformers, int facilityRentalFees, int otherExpenses);//returns the total cost
+    int bringTheMoney(int guarantee, int rentalFees, int otherExpenses); //returns the total cost
     //do performance practice
     void doPerformancePractice();
     //reserve a facility
-    int reserveAFacility(char room, int rentalPeriod);//return the rental information details
+    int reserveAFacility(char room, int rentalPeriod); //return the rental information details
 };
 
 /*
@@ -289,7 +291,8 @@ Thing 3) storefront business
     3)hire an employee
  */
 
-struct StorefrontBusiness{
+struct StorefrontBusiness
+{
     //business funds (yen) (int)
     int businessFunds = 500000;
     //store area (㎡)　(float)
@@ -301,7 +304,8 @@ struct StorefrontBusiness{
     //security equipment (bool) 
     bool SecurityEquipment = true;
 
-    struct apparel{
+    struct Apparel
+    {
     //required skills (std::string)
     std::string requiredSkills = "customer_service";
     //promotion method (std::string)
@@ -318,15 +322,15 @@ struct StorefrontBusiness{
     //provide services
     void provideServices(std::string kindOfServices = "tryingOn");
     //Hold an open sale
-    int holdAnOpenSale(int itemNumber);//return the reduced price
+    int holdAnOpenSale(int itemNumber); //return the reduced price
     };
     
     //produce products
     void produceProducts();
     //pay rent
-    int payRent(float distanceFromStation);//return the rental fee
+    int payRent(float distanceFromStation); //return the rental fee
     //hire an employee
-    int hireAnEmployee(int storeArea);//return the number of employees
+    int hireAnEmployee(int storeArea); //return the number of employees
 };
 
 /*
@@ -343,11 +347,12 @@ Thing 4) Camera
     3)brighten the image
  */
 
-struct Camera{
+struct Camera
+{
     //range of f-value (float)
     float rangeOfFvalue = 25.0f;
     //maximum number of pixels (int)
-    int maximumNumberOfPixels = 24;//(million)
+    int maximumNumberOfPixels = 24; //(million)
     //range of iso sensitivity (int)
     int rangeOfIsoSensitivity = 12800;
     //range shutter speed (second) (float)
@@ -358,7 +363,7 @@ struct Camera{
     //capture the light
     void captureTheLight(float fValue, int isoSensitivity, float shutterSpeed);
     //resolve image
-    void resolveImage(int maximumNumberOfPixels);
+    void resolveImage(int pixels);
     //brighten the image
     void brightenTheImage(int isoSensitivity);
 };
@@ -377,7 +382,8 @@ Thing 5)Wheel
     3)allows brake heat to escape
 */
 
-struct Wheel{
+struct Wheel
+{
     //diameter (inch) (float)
     float diameter = 20.0f;
     //number of bolt holes (int) 
@@ -395,7 +401,7 @@ struct Wheel{
     void transmitsEnginePowerToTiresAndRoadSurface();
     //allows brake heat to escape
     void allowsBrakeHeatToEscape();
-    };
+};
 
 /*
 Thing 6)Engine
@@ -410,7 +416,8 @@ Thing 6)Engine
     2)generate heat
     3)pushing the piston down
  */
-struct Engine{ 
+struct Engine
+{ 
     //nunber of cylinder (int)
     int nunberOfCylinder = 8;
     //horsepower (ps) (int)
@@ -423,12 +430,12 @@ struct Engine{
     bool turbo = false;
     
     //generate motive power
-    float generateMotivePower(int horsepower, float weight);//return the weight-to-power ratio
+    float generateMotivePower(int power, float weight); //return the weight-to-power ratio
     //generate heat
     void generateHeat();
     //pushing the piston down
-    void pushingThePistonDown(int engineDisplacement);
-    };
+    void pushingThePistonDown(int cylinderVolume);
+};
 
 /*
 Thing 7)Transmission
@@ -444,7 +451,8 @@ Thing 7)Transmission
     3)increase fuel efficiency
  */
 
-struct Transmission{
+struct Transmission
+{
     //AT (bool) 
     bool AT = true;
     //number of gears(int)
@@ -461,8 +469,8 @@ struct Transmission{
     //increase acceleration
     void increaseAcceleration(float zero_100kmh);
     //increase fuel efficiency
-    bool increaseFuelEfficiency(bool AT);//returns false if the AT is true
-    };
+    bool increaseFuelEfficiency(bool MT); //returns false if the AT is true
+};
 
 /*
 Thing 8)Body 
@@ -478,7 +486,8 @@ Thing 8)Body
     3)protects people from impact
  */
 
-struct Body{
+struct Body
+{
     //type of body shape (std::string)
     std::string typeOfBodyShape = "SUV";
     //over-all length (m) (float)
@@ -495,7 +504,7 @@ struct Body{
     //covering the engine
     void coveringTheEngine();
     //protects people from impact
-    float protectsPeopleFromImpact(bool airbag, int speed);//return probability of protecting people
+    float protectsPeopleFromImpact(bool airbag, int speed); //return probability of protecting people
 };
 
 /*
@@ -512,7 +521,8 @@ Thing 9)Gasoline
     3)burn
  */
 
-struct Gasoline{
+struct Gasoline
+{
     //type (std::string)
     std::string type = "regular";
     //fuel consumption (km/L) (float) 
@@ -525,7 +535,7 @@ struct Gasoline{
     int pricePerLiter = 160;
     
     //fruel your car 
-    int fruelYourCar(float fuelConsumption, float capascity);//mileage
+    int fruelYourCar(float fuelEfficient, float capascityOfGasoline); //mileage
     //inhale into the cylinder 
     void inhaleIntoTheCylinder(float cpacityOfinjector);
     //burn
@@ -546,24 +556,25 @@ Thing 10)Car
     3)change the speed
  */
 
-struct Car{
-//wheel (diameter) (float)
-Wheel bridgestone_model1;
-//engine (horsepower) (int)
-Engine toyota_model1;
-//transmission (number of gears) (int)
-Transmission aisin_aw_model1;
-//body (vehicle weight) (float)
-Body nissan_model1;
-//gasoline (type) (std::string)
-Gasoline mobil1_model1;
-
-//putting people 
-void puttingPeople(Body nissan_model1);
-//turn the car around
-void turnTheCarAround(Wheel bridgestone_model1);
-//change the speed
-void changeTheSpeed(Engine toyota_model1, Transmission aisin_aw_model1, Gasoline mobil1_model1);
+struct Car
+{
+    //wheel (diameter) (float)
+    Wheel bridgestone_model1;
+    //engine (horsepower) (int)
+    Engine toyota_model1;
+    //transmission (number of gears) (int)
+    Transmission aisin_aw_model1;
+    //body (vehicle weight) (float)
+    Body nissan_model1;
+    //gasoline (type) (std::string)
+    Gasoline mobil1_model1;
+    
+    //putting people 
+    void puttingPeople(Body nissan_model1);
+    //turn the car around
+    void turnTheCarAround(Wheel bridgestone_model1);
+    //change the speed
+    void changeTheSpeed(Engine toyota_model1, Transmission aisin_aw_model1, Gasoline mobil1_model1);
 };
 
 //
