@@ -200,6 +200,47 @@ Thing 1) Recipe
     3)heat several pans at the same time
 */
 
+struct Recipe
+{
+    //number of seasonings (int)
+    int numberOfSeasonings = 4;
+    //cost of necessary foodstuffs (yen) (int)
+    int costOfNecessaryFoodstuff = 3000;
+    //number of gas bills required (int)
+    int numberOfGasBillsRequired = 2;
+    //time it takes (minutes) (float)
+    float timeItTakes = 45.5f;
+    //number of dishes (int)
+    int numberOfDishes = 8;
+
+    struct RecipeWebsite {
+        //numberOfPage (int)
+        int numberOfPage = 4;
+        //video time (minutes) (int)
+        int videoTime = 7;
+        //number of characters 
+        int numberOfCharacters = 2000;
+        //nutrition facts label (bool)
+        bool nutritionFactsLabel = false;
+        //the mame of website
+        std::string theNameOfWebsite = "CookMaster";
+
+        void DisplaySeasonings(int numberOfSeasonings, std::string nameOfSeasonings);
+        void DisplayQuantitiesInLineWithTheNumberOfPeople(int numberOfPeople);
+        void VideoSpeaksHowToMakeIt();
+    };
+    
+    //seasoning for food 
+    void seasoningForFood();
+    //select foodstuffs
+    void selectfoodstuffs(RecipeWebsite omelet);
+    //heat several pans at the same time
+    bool heatSeveralPansAtTheSameTime(int numberOfGasBillsRequired, RecipeWebsite steak);  //returns true if it is more than 2
+
+};
+
+
+
 /*
 Thing 2) Live Performance
 5 properties:
@@ -213,6 +254,26 @@ Thing 2) Live Performance
     2)do performance practice
     3)reserve a facility
  */
+
+struct LivePerformance{
+    //fees for performers (yen) (int)
+    int feesForPerformers = 20000;
+    //days of practice (int)
+    int daysOfPractice = 10;
+    //facility rental fees (yen) (int) 
+    int facilityRentalFees = 40000;
+    //number of songs (int)
+    int numberOfSongs = 5;
+    //number of performers(int)
+    int numberOfPerformers = 5;
+    
+    //bring the money 
+    int bringTheMoney(int feesForPerformers, int facilityRentalFees, int otherExpenses);//returns the total cost
+    //do performance practice
+    void doPerformancePractice();
+    //reserve a facility
+    int reserveAFacility(char room, int rentalPeriod);//return the rental information details
+};
 
 /*
 Thing 3) storefront business
@@ -228,6 +289,46 @@ Thing 3) storefront business
     3)hire an employee
  */
 
+struct StorefrontBusiness{
+    //business funds (yen) (int)
+    int businessFunds = 500000;
+    //store area (㎡)　(float)
+    int storeArea = 1000;
+    //number of items (int)
+    int numberOfItems = 300;
+    //number of cash registers (int)
+    int numberOfCashRegisters = 5;
+    //security equipment (bool) 
+    bool SecurityEquipment = true;
+
+    struct apparel{
+    //required skills (std::string)
+    std::string requiredSkills = "customer_service";
+    //promotion method (std::string)
+    std::string promotionMethod = "internet";
+    //branf name (std:string)
+    std::string brandName = "Tokyo_Blue";
+    //distance from station (minutes) (int)
+    int distanceFromStation = 8;
+    //necessity of qualification (bool)
+    bool necessityOfQualification = false;
+
+    //provide products 
+    void provideProducts(std::string kindOfProducts = "cloth");
+    //provide services
+    void provideServices(std::string kindOfServices = "tryingOn");
+    //Hold an open sale
+    int holdAnOpenSale(int itemNumber);//return the reduced price
+    };
+    
+    //produce products
+    void produceProducts();
+    //pay rent
+    int payRent(float distanceFromStation);//return the rental fee
+    //hire an employee
+    int hireAnEmployee(int storeArea);//return the number of employees
+};
+
 /*
 Thing 4) Camera
 5 properties:
@@ -241,20 +342,60 @@ Thing 4) Camera
     2)resolve image
     3)brighten the image
  */
+
+struct Camera{
+    //range of f-value (float)
+    float rangeOfFvalue = 25.0f;
+    //maximum number of pixels (int)
+    int maximumNumberOfPixels = 24;//(million)
+    //range of iso sensitivity (int)
+    int rangeOfIsoSensitivity = 12800;
+    //range shutter speed (second) (float)
+    float rangeShutterSpeed = 8.000f;
+    //maximum zoom magnification (float)
+    float maximumZoomMagnification = 6.0f;
     
+    //capture the light
+    void captureTheLight(float fValue, int isoSensitivity, float shutterSpeed);
+    //resolve image
+    void resolveImage(int maximumNumberOfPixels);
+    //brighten the image
+    void brightenTheImage(int isoSensitivity);
+};
+
 /*
 Thing 5)Wheel
 5 properties:
-    1)diameter (float)
-    2)umber of bolt holes (int)
-    3)rim width (float)
+    1)diameter (inch) (float)
+    2)number of bolt holes (int)
+    3)rim width (inch) (float)
     4)flange shape (char)
-    5)pitch circle diameter (float)
+    5)pitch circle diameter (mm) (float)
 3 things it can do:
     1)support the body
     2)transmits engine power to tires and road surface
     3)allows brake heat to escape
 */
+
+struct Wheel{
+    //diameter (inch) (float)
+    float diameter = 20.0f;
+    //number of bolt holes (int) 
+    int umberOfBoltHoles = 5;
+    //rim width (inch) (float)
+    float rimWidth = 7.5f;
+    //flange shape (char) 
+    char flangeShape = 'j';
+    //pitch circle diameter (mm) (float)
+    float pitchCircleDiameter = 114.3f;
+    
+    //support the body
+    void supportTheBody(float weightCapacity);
+    //transmits engine power to tires and road surface
+    void transmitsEnginePowerToTiresAndRoadSurface();
+    //allows brake heat to escape
+    void allowsBrakeHeatToEscape();
+    };
 
 /*
 Thing 6)Engine
@@ -269,6 +410,25 @@ Thing 6)Engine
     2)generate heat
     3)pushing the piston down
  */
+struct Engine{ 
+    //nunber of cylinder (int)
+    int nunberOfCylinder = 8;
+    //horsepower (ps) (int)
+    int horsepower = 250;
+    //engine displacement (cc)　(int)
+    int engineDisplacement = 2000;
+    //maximum torque (Nm) (int)
+    int maximumTorque = 200;
+    //turbo (bool)
+    bool turbo = false;
+    
+    //generate motive power
+    float generateMotivePower(int horsepower, float weight);//return the weight-to-power ratio
+    //generate heat
+    void generateHeat();
+    //pushing the piston down
+    void pushingThePistonDown(int engineDisplacement);
+    };
 
 /*
 Thing 7)Transmission
@@ -284,6 +444,26 @@ Thing 7)Transmission
     3)increase fuel efficiency
  */
 
+struct Transmission{
+    //AT (bool) 
+    bool AT = true;
+    //number of gears(int)
+    int numberOfGears = 7;
+    //driven type (std::string) 
+    std::string drivenType = "AWD";
+    //number of clutch plates (int)
+    int numberOfClutchPlates = 1;
+    //frequency of maintenance (days) (int)
+    int frequencyOfMaintenance = 180;
+    
+    //create driving force
+    void createDrivingForce();
+    //increase acceleration
+    void increaseAcceleration(float zero_100kmh);
+    //increase fuel efficiency
+    bool increaseFuelEfficiency(bool AT);//returns false if the AT is true
+    };
+
 /*
 Thing 8)Body 
 5 properties:
@@ -297,6 +477,26 @@ Thing 8)Body
     2)covering the engine
     3)protects people from impact
  */
+
+struct Body{
+    //type of body shape (std::string)
+    std::string typeOfBodyShape = "SUV";
+    //over-all length (m) (float)
+    float overAllLength = 4825.0f;
+    //over-all height (m) (float)
+    float overAllHeight = 1885.0f;
+    //capacity (int)
+    int capacity = 7;
+    //weight (kg) (float)
+    float weight = 2050;
+    
+    //carry luggage
+    void carryLuggage(int maximumCarryingCapacity);
+    //covering the engine
+    void coveringTheEngine();
+    //protects people from impact
+    float protectsPeopleFromImpact(bool airbag, int speed);//return probability of protecting people
+};
 
 /*
 Thing 9)Gasoline
@@ -312,6 +512,26 @@ Thing 9)Gasoline
     3)burn
  */
 
+struct Gasoline{
+    //type (std::string)
+    std::string type = "regular";
+    //fuel consumption (km/L) (float) 
+    float fuelConsumption = 10.5;
+    //capacity (liter)　(float)
+    float capascity = 93;
+    //boiling point (degree) (int)
+    int boilingPoint = 40;
+    //price per liter (yen) (int)
+    int pricePerLiter = 160;
+    
+    //fruel your car 
+    int fruelYourCar(float fuelConsumption, float capascity);//mileage
+    //inhale into the cylinder 
+    void inhaleIntoTheCylinder(float cpacityOfinjector);
+    //burn
+    void burn();
+};
+
 /*
 Thing 10)Car 
 5 properties:
@@ -325,6 +545,28 @@ Thing 10)Car
     2)turn the car around
     3)change the speed
  */
+
+struct Car{
+//wheel (diameter) (float)
+Wheel bridgestone_model1;
+//engine (horsepower) (int)
+Engine toyota_model1;
+//transmission (number of gears) (int)
+Transmission aisin_aw_model1;
+//body (vehicle weight) (float)
+Body nissan_model1;
+//gasoline (type) (std::string)
+Gasoline mobil1_model1;
+
+//putting people 
+void puttingPeople(Body nissan_model1);
+//turn the car around
+void turnTheCarAround(Wheel bridgestone_model1);
+//change the speed
+void changeTheSpeed(Engine toyota_model1, Transmission aisin_aw_model1, Gasoline mobil1_model1);
+};
+
+//
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
