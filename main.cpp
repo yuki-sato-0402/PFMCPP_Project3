@@ -306,23 +306,23 @@ struct StorefrontBusiness
 
     struct Apparel
     {
-    //required skills (std::string)
-    std::string requiredSkills = "customer_service";
-    //promotion method (std::string)
-    std::string promotionMethod = "internet";
-    //branf name (std:string)
-    std::string brandName = "Tokyo_Blue";
-    //distance from station (minutes) (int)
-    int distanceFromStation = 8;
-    //necessity of qualification (bool)
-    bool necessityOfQualification = false;
-
-    //provide products 
-    void provideProducts(std::string kindOfProducts = "cloth");
-    //provide services
-    void provideServices(std::string kindOfServices = "tryingOn");
-    //Hold an open sale
-    int holdAnOpenSale(int itemNumber); //return the reduced price
+        //required skills (std::string)
+        std::string requiredSkills = "customer_service";
+        //promotion method (std::string)
+        std::string promotionMethod = "internet";
+        //branf name (std:string)
+        std::string brandName = "Tokyo_Blue";
+        //distance from station (minutes) (int)
+        int distanceFromStation = 8;
+        //necessity of qualification (bool)
+        bool necessityOfQualification = false;
+    
+        //provide products 
+        void provideProducts(std::string kindOfProducts = "cloth");
+        //provide services
+        void provideServices(std::string kindOfServices = "tryingOn");
+        //Hold an open sale
+        int holdAnOpenSale(int itemNumber); //return the reduced price
     };
     
     //produce products
@@ -526,16 +526,16 @@ struct Gasoline
     //type (std::string)
     std::string type = "regular";
     //fuel consumption (km/L) (float) 
-    float fuelConsumption = 10.5;
+    float fuelConsumption = 10.5f;
     //capacity (liter)　(float)
-    float capascity = 93;
+    float capacity = 93.0f;
     //boiling point (degree) (int)
-    int boilingPoint = 40;
+    int boilingPoint = 40.0f;
     //price per liter (yen) (int)
     int pricePerLiter = 160;
-    
-    //fruel your car 
-    int fruelYourCar(float fuelEfficient, float capascityOfGasoline); //mileage
+
+    //fuel your car 
+    int fuelYourCar(float fuelEfficient, float capascityOfGasoline); //mileage
     //inhale into the cylinder 
     void inhaleIntoTheCylinder(float cpacityOfInjector);
     //burn
@@ -570,11 +570,11 @@ struct Car
     Gasoline mobil1_model1;
     
     //putting people 
-    void puttingPeople(Body nissan_model1);
+    void puttingPeople(Body nissan);
     //turn the car around
-    void turnTheCarAround(Wheel bridgestone_model1);
+    void turnTheCarAround(Wheel bridgestone);
     //change the speed
-    void changeTheSpeed(Engine toyota_model1, Transmission aisin_aw_model1, Gasoline mobil1_model1);
+    void changeTheSpeed(Engine toyota, Transmission aisin, Gasoline mobil1);
 };
 
 //
