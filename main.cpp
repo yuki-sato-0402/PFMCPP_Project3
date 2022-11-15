@@ -226,9 +226,9 @@ struct Recipe
         //the mame of website
         std::string theNameOfWebsite = "CookMaster";
 
-        void DisplaySeasonings(int numberOfSeasonings, std::string nameOfSeasonings);
-        void DisplayQuantitiesInLineWithTheNumberOfPeople(int numberOfPeople);
-        void VideoSpeaksHowToMakeIt();
+        void displaySeasonings(int numberOfSeasonings, std::string nameOfSeasonings);
+        void displayQuantitiesInLineWithTheNumberOfPeople(int numberOfPeople);
+        void dideoSpeaksHowToMakeIt();
     };
     
     //seasoning for food 
@@ -302,7 +302,7 @@ struct StorefrontBusiness
     //number of cash registers (int)
     int numberOfCashRegisters = 5;
     //security equipment (bool) 
-    bool SecurityEquipment = true;
+    bool securityEquipment = true;
 
     struct Apparel
     {
@@ -537,7 +537,7 @@ struct Gasoline
     //fruel your car 
     int fruelYourCar(float fuelEfficient, float capascityOfGasoline); //mileage
     //inhale into the cylinder 
-    void inhaleIntoTheCylinder(float cpacityOfinjector);
+    void inhaleIntoTheCylinder(float cpacityOfInjector);
     //burn
     void burn();
 };
