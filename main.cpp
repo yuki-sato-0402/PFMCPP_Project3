@@ -570,12 +570,15 @@ struct Car
     Gasoline mobil1_model1;
     
     //putting people 
-    void puttingPeople(Body nissan);
+    void puttingPeople(bool childSeat);   
     //turn the car around
-    void turnTheCarAround(Wheel bridgestone);
+    void turnTheCarAround(float minimumTurningRadius);
     //change the speed
-    void changeTheSpeed(Engine toyota, Transmission aisin, Gasoline mobil1);
+    void changeTheSpeed(float acceleration, float topspeed);
 };
+
+
+
 
 //
 /*
