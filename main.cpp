@@ -192,7 +192,7 @@ struct Recipe
 void Recipe::RecipeWebsite::displaySeasonings(int seasoning, std::string nameOfSeasonings)
 {
     std::string str = nameOfSeasonings;
-    printf("%d %s are required \n", seasoning, str.c_str());
+    std::cout << seasoning << " " << str << " " "is required." << std::endl;
 }
 
 int Recipe::RecipeWebsite::displayQuantitiesInLineWithTheNumberOfPeople(int seasoning, int numberOfPeople)
@@ -282,19 +282,19 @@ struct StorefrontBusiness
     
     void produceProducts();
     double payRent(double distanceFromStation);
-    double hireAnEmployee(int area, double ans); 
+    int hireAnEmployee(int newAns, int area, double ans); 
 };
 
 void StorefrontBusiness::Company::provideProducts(std::string kindOfProducts)
 {
     std::string str = kindOfProducts;
-    printf ("We sell %s \n", str.c_str());
+    std::cout << " " << str << "We sell" " " << std::endl;
 }
 
 void StorefrontBusiness::Company::provideServices(std::string kindOfServices)
 {
     std::string str = kindOfServices;
-    printf ("Free Service : %s \n", str.c_str());
+    std::cout << " " << str << "Free Service :" " " << std::endl;
 }
 
 double StorefrontBusiness::Company::holdAnOpenSale(int itemNumber, double price)
@@ -320,10 +320,11 @@ double StorefrontBusiness::payRent(double distanceFromStation)
 }
 
 
-double StorefrontBusiness::hireAnEmployee(int area, double ans)
+int StorefrontBusiness::hireAnEmployee(int newAns,int area, double ans)
 {
-    ans = round((double)area / 25);
-    return ans;
+    ans = round(area / 25);
+    newAns = static_cast<int>(ans);
+    return newAns;
 }
 
 
@@ -344,11 +345,11 @@ void Camera::captureTheLight(double fValue, int isoSensitivity, double shutterSp
 {
     if(fValue >= 5.6 || isoSensitivity >= 800 || shutterSpeed >= 0.02)
     {
-        printf("bright");
+        std::cout << "bright" << std::endl;
     }
     else 
     {
-        printf("dark");
+        std::cout << "dark" << std::endl;
     }
 }
 
@@ -356,7 +357,7 @@ void resolveImage(int pixels)
 {
     if(pixels >= 20000000)
     {
-        printf("High_Resolution");
+        std::cout << "High_Resolution" << std::endl;
     }
         
 }
@@ -379,11 +380,11 @@ void Wheel::supportTheBody(float weightCapacity)
 {
     if(weightCapacity >= 2000)
     {
-        printf("classB");
+        std::cout << "classB" << std::endl;
     }
     else
     {
-        printf("classA");
+        std::cout << "classA" << std::endl;
     }
 }
 
@@ -403,14 +404,16 @@ struct Engine
     int maximumTorque = 200;
     bool turbo = false;
     
-    float generateMotivePower(int power, float weight); 
+    int generateMotivePower(int power, double weight, int newAns, double ans); 
     void generateHeat();
     void pushingThePistonDown(int cylinderVolume);
 };
 
-float Engine::generateMotivePower(int power, float weight)
+int Engine::generateMotivePower(int power, double weight, int newAns, double ans)
 {
-    return weight / (float)power;
+    ans = round(weight / power);
+    newAns = static_cast<int>(ans);
+    return newAns;
 }
 
 void Engine::generateHeat()
@@ -421,15 +424,15 @@ void Engine::pushingThePistonDown(int cylinderVolume)
 {    
     if(cylinderVolume >= 2000)
     {
-        printf("Nomal_Car");
+        std::cout << "Nomal_Car" << std::endl;
     }
     else if(cylinderVolume >= 660)
     {
-        printf("Small_Car");
+        std::cout << "Small_Car" << std::endl;
     }
     else
     {
-        printf("Light_Car");
+        std::cout << "Light_Car" << std::endl;
     }
 }
 
@@ -455,11 +458,11 @@ void Transmission::increaseAcceleration(float zero_100kmh)
 {
     if(zero_100kmh <= 5.0f)
     {
-        printf("fast");
+        std::cout << "fast" << std::endl;
     }
     else
     {
-        printf("nomal");
+        std::cout << "nomal" << std::endl;
     }
 }
 
@@ -467,11 +470,11 @@ void Transmission::increaseFuelEfficiency(bool MT)
 {
     if(MT == true)
     {
-        printf("Good_Fuel_Economy");
+        std::cout << "Good_Fuel_Economy" << std::endl;
     }
     else
     {
-        printf("Bad_Fuel_Economy");
+        std::cout << "Bad_Fuel_Economy" << std::endl;
     }
 }
 
@@ -561,7 +564,7 @@ void Car::puttingPeople(bool childSeat)
 {
     if (childSeat == true)
     {
-        printf("Suitable for children");
+        std::cout << "Suitable for children" << std::endl;
     }
 }
 
@@ -569,11 +572,11 @@ void Car::turnTheCarAround(float minimumTurningRadius)
 {  
     if(minimumTurningRadius >= 5.0f)
     {
-        printf("Large_Car");
+        std::cout << "Large_Car" << std::endl;
     }
     else
     {
-        printf("Nomal_Car");
+        std::cout << "Nomal_Car" << std::endl;
     }
     
 }
