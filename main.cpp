@@ -119,8 +119,8 @@ struct Person
 
     struct Foot
     {
-    void stepForward();
-    int stepSize();
+        void stepForward();
+        int stepSize();
     };
 
     Foot leftFoot;
@@ -132,7 +132,7 @@ struct Person
 
 void Person::run(int howFast, bool startWithLeftFoot)
 {
-     if(startWithLeftFoot == true )
+    if(startWithLeftFoot == true)
     {
         leftFoot.stepForward();
         rightFoot.stepForward();
@@ -219,6 +219,7 @@ bool Recipe::heatSeveralPansAtTheSameTime(int gasBills)
     {
         return true;
     }
+    
     return false;
 }
 
@@ -241,11 +242,11 @@ int LivePerformance::bringTheMoney(int guarantee, int rentalFees, int otherExpen
     return guarantee + rentalFees + otherExpenses;
 }
 
-void doPerformancePractice()
+void LivePerformance::doPerformancePractice()
 {  
 }
 
- int reserveAFacility(char room, int rentalPeriod, int rentalFees)
+ int LivePerformance::reserveAFacility(char room, int rentalPeriod, int rentalFees)
 { 
     if(room == 'a' || room == 'b' || room == 'c')
     {
@@ -282,7 +283,7 @@ struct StorefrontBusiness
     
     void produceProducts();
     double payRent(double distanceFromStation);
-    int hireAnEmployee(int newAns, int area, double ans); 
+    double hireAnEmployee(int area, double ans); 
 };
 
 void StorefrontBusiness::Company::provideProducts(std::string kindOfProducts)
@@ -299,15 +300,12 @@ void StorefrontBusiness::Company::provideServices(std::string kindOfServices)
 
 double StorefrontBusiness::Company::holdAnOpenSale(int itemNumber, double price)
 {
-    double floor(double);
     if(itemNumber >= 0 && itemNumber < 1000)
     {
         return price * 0.75;
     }  
-    else
-    {
-        return price * 0.9;
-    }
+    
+    return price * 0.9;
 }
 
 void StorefrontBusiness::produceProducts()
@@ -320,11 +318,10 @@ double StorefrontBusiness::payRent(double distanceFromStation)
 }
 
 
-int StorefrontBusiness::hireAnEmployee(int newAns,int area, double ans)
+double StorefrontBusiness::hireAnEmployee(int area, double ans)
 {
     ans = round(area / 25);
-    newAns = static_cast<int>(ans);
-    return newAns;
+    return ans;
 }
 
 
@@ -338,7 +335,7 @@ struct Camera
     
     void captureTheLight(double fValue, int isoSensitivity, double shutterSpeed);
     void resolveImage(int pixels);
-    void brightenTheImage(int isoSensitivity);
+    void brightenTheImage(int isoSensitivity, int num);
 };
 
 void Camera::captureTheLight(double fValue, int isoSensitivity, double shutterSpeed)
@@ -353,15 +350,19 @@ void Camera::captureTheLight(double fValue, int isoSensitivity, double shutterSp
     }
 }
 
-void resolveImage(int pixels)
+void Camera::resolveImage(int pixels)
 {
     if(pixels >= 20000000)
     {
         std::cout << "High_Resolution" << std::endl;
-    }
-        
+    }        
 }
 
+void Camera::brightenTheImage(int isoSensitivity,int num)
+{
+    num = isoSensitivity;
+    std::cout << " " << num << "isoSensitivity :" " " << std::endl;
+}
 
 struct Wheel
 {
@@ -404,16 +405,15 @@ struct Engine
     int maximumTorque = 200;
     bool turbo = false;
     
-    int generateMotivePower(int power, double weight, int newAns, double ans); 
+    double generateMotivePower(int power, double weight, double ans); 
     void generateHeat();
     void pushingThePistonDown(int cylinderVolume);
 };
 
-int Engine::generateMotivePower(int power, double weight, int newAns, double ans)
+double Engine::generateMotivePower(int power, double weight, double ans)
 {
     ans = round(weight / power);
-    newAns = static_cast<int>(ans);
-    return newAns;
+    return ans;
 }
 
 void Engine::generateHeat()
@@ -501,22 +501,20 @@ void  Body::coveringTheEngine()
 
 float Body::protectsPeopleFromImpact(bool airbag, int speed)
 {
-        if(airbag == true || speed <= 70)
-        {
-            return 50.0f;
-        }
-        else if(airbag == true || speed <= 90)
-        {
-            return 35.0f;
-        }
-        else if(airbag == false || speed <= 90) 
-        {
-            return 10.0f;
-        }
-        else
-        {
-            return 5.0;
-        }
+    if(airbag == true || speed <= 70)
+    {
+        return 50.0f;
+    }
+    else if(airbag == true || speed <= 90)
+    {
+        return 35.0f;
+    }
+    else if(airbag == false || speed <= 90)
+    {
+        return 10.0f;
+    }
+    
+    return 5.0f;
 }
 
 struct Gasoline
@@ -562,7 +560,7 @@ struct Car
 
 void Car::puttingPeople(bool childSeat)
 {
-    if (childSeat == true)
+    if(childSeat == true)
     {
         std::cout << "Suitable for children" << std::endl;
     }
@@ -578,7 +576,6 @@ void Car::turnTheCarAround(float minimumTurningRadius)
     {
         std::cout << "Nomal_Car" << std::endl;
     }
-    
 }
 
 std::string Car::changeTheSpeed(float acceleration, float topspeed)
@@ -599,10 +596,8 @@ std::string Car::changeTheSpeed(float acceleration, float topspeed)
     {
         return "MR";
     }
-    else
-    {
-        return "Others";
-    }
+    
+    return "Others";
 }
 
 //
