@@ -129,6 +129,14 @@ struct Person
     void run(int howFast, bool startWithLeftFoot);
 };
 
+void Person::Foot::stepForward()
+{
+}
+
+int Person::Foot::stepSize()
+{
+    return 0;
+}
 
 void Person::run(int howFast, bool startWithLeftFoot)
 {
